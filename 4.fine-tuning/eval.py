@@ -18,7 +18,7 @@ def calculate_error():
         print('Actual count: ', df_actual.shape[0])
         raise ValueError("The file does not have same rows")
 
-    # Merge by Member key
+    
     df = df_pred.merge(df_actual, left_on = 'MemberID', right_on = 'MemberID')#.drop(['ClaimsTruncated'],axis=1)
     print(df.head())
 
